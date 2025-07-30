@@ -1,0 +1,33 @@
+/* about.css - Styles for the About page */
+
+.about-main{
+padding: 2rem;
+margin: 5rem;
+
+}
+
+.about-section {
+  background: var(--card-bg);
+  background-color: rgb(138, 113, 80);
+  font-style: sans-serif;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 12);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 12);
+  padding: 10rem;
+  border-radius: 2rem;
+}
+
+.about-section h1 {
+  margin-top: 0;
+} 
+
+.skills-section{
+background: var(--card-bg);
+font-style: italic;
+background-color: rgb(138, 113, 80);
+border-radius: 8px;
+box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+padding: 2rem;
+margin: 2rem 0;
+
+}
