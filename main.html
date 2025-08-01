@@ -2,41 +2,76 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Home | My Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dhyll Roco | Portfolio</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/footer.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-  <!-- Header / Navigation -->
+  <!-- Header -->
   <header class="site-header">
-    <nav>
-      <ul class="nav-list">
-        <li><a href="main.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="header-container">
+      <div class="logo">
+        <h1>DHYLL</h1>
+      </div>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="main.html" class="active">HOME</a></li>
+          <li><a href="about.html">ABOUT ME</a></li>
+          <li><a href="projects.html">PROJECTS</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <!-- Main Content -->
   <main class="home-main">
-    <section class="intro">
-      <div class="intro-container">
-        <div class="intro-text">
-          <img src="picture/me.jpg" alt="Welcome" class="intro-image">
-          <h1>Welcome!</h1>
-          <p>Hi there! I'm Dhyll Roco. Welcome to my portfolio! Feel free to explore my work and get to know me!</p>
+    <div class="hero-container">
+      <!-- Left side - text -->
+      <div class="hero-text">
+        <h1 class="hero-name">Dhyll Roco</h1>
+        <h2 class="hero-title">Web Developer & Designer</h2>
+        <p class="hero-description">
+          Hey there! I'm a passionate web developer who loves creating cool websites. 
+          I focus on making stuff that actually works and looks good. Always excited 
+          to work on new projects that solve real problems!
+        </p>
+        <div class="hero-buttons">
+          <a href="#" class="btn btn-outline">
+            <i class="fas fa-download"></i>
+            Download CV
+          </a>
+          <a href="projects.html" class="btn btn-primary">
+            <i class="fas fa-bullseye"></i>
+            See My Work
+          </a>
         </div>
-        
       </div>
-    </section>
+      
+      <!-- Right side - image -->
+      <div class="hero-image">
+        <div class="image-container">
+          <img src="picture/me.jpg" alt="Dhyll Roco" class="profile-image">
+          <div class="neon-accent"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Social links -->
+    <div class="social-icons">
+      <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+    </div>
   </main>
 
   <!-- Footer -->
   <footer class="site-footer">
-    <p>&copy; 2025 My Portfolio</p>
+    <p>&copy; 2025 Dhyll Roco Portfolio</p>
   </footer>
 </body>
 </html> 

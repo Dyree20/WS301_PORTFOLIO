@@ -1,33 +1,186 @@
-/* about.css - Styles for the About page */
+/* About page styles */
 
-.about-main{
-padding: 2rem;
-margin: 5rem;
-
+.about-main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  padding-top: 120px;
+  padding-bottom: 100px;
 }
 
-.about-section {
+.about-container {
   background: var(--card-bg);
-  background-color: rgb(138, 113, 80);
-  font-style: sans-serif;
-  border-radius: 8px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 12);
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 12);
-  padding: 10rem;
-  border-radius: 2rem;
+  border-radius: 20px;
+  padding: 3rem;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
 }
 
-.about-section h1 {
-  margin-top: 0;
-} 
+.about-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100px;
+  background: var(--neon-green);
+  border-radius: 50%;
+  opacity: 0.1;
+  filter: blur(40px);
+}
 
-.skills-section{
-background: var(--card-bg);
-font-style: italic;
-background-color: rgb(138, 113, 80);
-border-radius: 8px;
-box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-padding: 2rem;
-margin: 2rem 0;
+.about-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--neon-green);
+  margin-bottom: 2rem;
+  text-align: center;
+}
 
+.about-description {
+  font-size: 1.2rem;
+  color: var(--text-gray);
+  line-height: 1.8;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+/* Skills section */
+.skills-section {
+  margin-bottom: 3rem;
+}
+
+.skills-section h2 {
+  font-size: 1.8rem;
+  color: var(--text-white);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.skill-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-gray);
+  border-radius: 15px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.skill-item:hover {
+  background: rgba(0, 255, 136, 0.1);
+  border-color: var(--neon-green);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 255, 136, 0.2);
+}
+
+.skill-item i {
+  font-size: 2rem;
+  color: var(--neon-green);
+}
+
+.skill-item span {
+  font-weight: 600;
+  color: var(--text-white);
+  font-size: 0.9rem;
+}
+
+/* Interests section */
+.interests-section h2 {
+  font-size: 1.8rem;
+  color: var(--text-white);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.interests-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.interests-list li {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-gray);
+  border-radius: 10px;
+  padding: 1rem 1.5rem;
+  color: var(--text-gray);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+.interests-list li::before {
+  content: '→';
+  position: absolute;
+  left: 1rem;
+  color: var(--neon-green);
+  font-weight: bold;
+}
+
+.interests-list li:hover {
+  background: rgba(0, 255, 136, 0.1);
+  border-color: var(--neon-green);
+  color: var(--text-white);
+  transform: translateX(5px);
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .about-main {
+    padding: 1rem;
+    padding-top: 100px;
+  }
+  
+  .about-container {
+    padding: 2rem;
+  }
+  
+  .about-title {
+    font-size: 2.5rem;
+  }
+  
+  .about-description {
+    font-size: 1.1rem;
+  }
+  
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .skill-item {
+    padding: 1rem;
+  }
+  
+  .skill-item i {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-title {
+    font-size: 2rem;
+  }
 }

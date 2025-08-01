@@ -1,33 +1,96 @@
-/* header.css - Styles for the site header and navigation */
+/* Header stuff */
 
 .site-header {
-  background: var(--header-bg);
-  background-color: rgb(87, 145, 49);
-  padding: 1rem 0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1.2rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo h1 {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: var(--neon-green);
+  letter-spacing: 0.08em;
+  text-shadow: 0 0 8px rgba(0, 255, 136, 0.4);
+}
+
+/* Navigation */
 .nav-list {
   list-style: none;
   display: flex;
-  justify-content: center;
-  gap: 2.5rem;
+  gap: 2rem;
   margin: 0;
   padding: 0;
 }
 
 .nav-list a {
   font-family: 'Segoe UI', Arial, sans-serif;
-  font-weight: 700;
-  font-size: 1.1rem;
-  letter-spacing: 0.04em;
-  color: var(--primary-text);
-  transition: color 0.2s, border-bottom 0.2s;
-  padding-bottom: 2px;
-  color: white;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  color: var(--text-white);
+  text-decoration: none;
+  transition: all 0.25s ease;
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+  position: relative;
 }
 
 .nav-list a:hover {
-  color: var(--accent);
+  color: var(--neon-green);
+  background: rgba(0, 255, 136, 0.08);
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.25);
+}
 
+.nav-list a.active {
+  color: var(--neon-green);
+  background: rgba(0, 255, 136, 0.12);
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.35);
+}
+
+/* Mobile stuff */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 0 1rem;
+  }
+  
+  .logo h1 {
+    font-size: 1.4rem;
+  }
+  
+  .nav-list {
+    gap: 0.8rem;
+  }
+  
+  .nav-list a {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-list {
+    gap: 0.4rem;
+  }
+  
+  .nav-list a {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.6rem;
+  }
 }
