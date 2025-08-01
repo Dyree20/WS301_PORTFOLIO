@@ -1,6 +1,3 @@
-/* My Portfolio Styles - Dark Theme */
-
-/* Colors */
 :root {
   --bg-dark: #1a1a1a;
   --card-bg: #2a2a2a;
@@ -11,7 +8,6 @@
   --border-gray: #404040;
 }
 
-/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -26,7 +22,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Cool background effect */
 body::before {
   content: '';
   position: fixed;
@@ -44,7 +39,6 @@ body::before {
   100% { opacity: 0.6; }
 }
 
-/* Main stuff */
 .home-main {
   min-height: 100vh;
   display: flex;
@@ -54,7 +48,6 @@ body::before {
   position: relative;
 }
 
-/* Hero container */
 .hero-container {
   background: var(--card-bg);
   border-radius: 20px;
@@ -70,7 +63,6 @@ body::before {
   overflow: hidden;
 }
 
-/* Diagonal thing */
 .hero-container::before {
   content: '';
   position: absolute;
@@ -83,7 +75,6 @@ body::before {
   pointer-events: none;
 }
 
-/* Text section */
 .hero-text {
   z-index: 2;
   position: relative;
@@ -113,7 +104,6 @@ body::before {
   max-width: 500px;
 }
 
-/* Buttons */
 .hero-buttons {
   display: flex;
   gap: 1rem;
@@ -156,7 +146,6 @@ body::before {
   box-shadow: 0 10px 20px rgba(0, 255, 136, 0.3);
 }
 
-/* Image section */
 .hero-image {
   z-index: 2;
   position: relative;
@@ -181,7 +170,6 @@ body::before {
   filter: grayscale(100%) contrast(120%);
 }
 
-/* Neon circle thing */
 .neon-accent {
   position: absolute;
   top: -20px;
@@ -205,7 +193,6 @@ body::before {
   }
 }
 
-/* Social icons */
 .social-icons {
   position: absolute;
   right: 2rem;
@@ -239,7 +226,6 @@ body::before {
   box-shadow: 0 5px 15px rgba(0, 255, 136, 0.3);
 }
 
-/* Mobile stuff */
 @media (max-width: 1024px) {
   .hero-container {
     grid-template-columns: 1fr;

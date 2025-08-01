@@ -1,5 +1,3 @@
-/* Contact page styles */
-
 .contact-main {
   min-height: 100vh;
   display: flex;
@@ -56,7 +54,6 @@
   align-items: start;
 }
 
-/* Contact info */
 .contact-info {
   display: flex;
   flex-direction: column;
@@ -114,7 +111,6 @@
   color: var(--neon-green);
 }
 
-/* Contact form */
 .contact-form {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--border-gray);
@@ -192,7 +188,6 @@
   font-size: 0.9rem;
 }
 
-/* Mobile styles */
 @media (max-width: 768px) {
   .contact-main {
     padding: 1rem;
